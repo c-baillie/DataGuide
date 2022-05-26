@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.436">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Health Care Data Guide</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#chapter-1-improvement-methodology-provost_health_2011" id="toc-chapter-1-improvement-methodology-provost_health_2011" class="nav-link active" data-scroll-target="#chapter-1-improvement-methodology-provost_health_2011">Chapter 1: Improvement Methodology <span class="citation" data-cites="provost_health_2011">[<span>1</span>]</span></a></li>
+  <li><a href="#chapter-2-using-data-for-improvement" id="toc-chapter-2-using-data-for-improvement" class="nav-link" data-scroll-target="#chapter-2-using-data-for-improvement">Chapter 2: Using Data for Improvement</a></li>
+  <li><a href="#chapter-3-understanding-variation-using-run-charts" id="toc-chapter-3-understanding-variation-using-run-charts" class="nav-link" data-scroll-target="#chapter-3-understanding-variation-using-run-charts">Chapter 3: Understanding Variation Using Run Charts</a>
+  <ul class="collapse">
+  <li><a href="#four-rules-to-help-interpret-a-run-chart" id="toc-four-rules-to-help-interpret-a-run-chart" class="nav-link" data-scroll-target="#four-rules-to-help-interpret-a-run-chart">Four Rules to Help Interpret a Run Chart</a></li>
+  </ul></li>
+  <li><a href="#chapter-4-learning-from-variation-in-data" id="toc-chapter-4-learning-from-variation-in-data" class="nav-link" data-scroll-target="#chapter-4-learning-from-variation-in-data">Chapter 4: Learning from Variation in Data</a>
+  <ul class="collapse">
+  <li><a href="#using-shewhart-charts-to-given-direction-to-an-improvement-effort" id="toc-using-shewhart-charts-to-given-direction-to-an-improvement-effort" class="nav-link" data-scroll-target="#using-shewhart-charts-to-given-direction-to-an-improvement-effort">Using Shewhart Charts to Given Direction to an Improvement Effort</a></li>
+  <li><a href="#rules-for-determining-a-special-cause" id="toc-rules-for-determining-a-special-cause" class="nav-link" data-scroll-target="#rules-for-determining-a-special-cause">Rules for Determining a Special Cause</a></li>
+  </ul></li>
+  <li><a href="#chapter-5-understanding-variation-shewart-charts" id="toc-chapter-5-understanding-variation-shewart-charts" class="nav-link" data-scroll-target="#chapter-5-understanding-variation-shewart-charts">Chapter 5: Understanding Variation Shewart Charts</a>
+  <ul class="collapse">
+  <li><a href="#understanding-process-variation" id="toc-understanding-process-variation" class="nav-link" data-scroll-target="#understanding-process-variation">Understanding process variation</a></li>
+  <li><a href="#variation" id="toc-variation" class="nav-link" data-scroll-target="#variation">Variation</a></li>
+  <li><a href="#shewhart-chart-selection-guide" id="toc-shewhart-chart-selection-guide" class="nav-link" data-scroll-target="#shewhart-chart-selection-guide">Shewhart Chart Selection Guide</a></li>
+  <li><a href="#continuous-data" id="toc-continuous-data" class="nav-link" data-scroll-target="#continuous-data">Continuous Data</a>
+  <ul class="collapse">
+  <li><a href="#figure-5.7-example-of-x-and-s-chart" id="toc-figure-5.7-example-of-x-and-s-chart" class="nav-link" data-scroll-target="#figure-5.7-example-of-x-and-s-chart">Figure 5.7: Example of X and S Chart</a></li>
+  </ul></li>
+  <li><a href="#the-p-chart-for-classiﬁcation-data" id="toc-the-p-chart-for-classiﬁcation-data" class="nav-link" data-scroll-target="#the-p-chart-for-classiﬁcation-data">The P Chart for Classiﬁcation Data</a></li>
+  <li><a href="#c-and-u-charts-for-counts-of-nonconformities" id="toc-c-and-u-charts-for-counts-of-nonconformities" class="nav-link" data-scroll-target="#c-and-u-charts-for-counts-of-nonconformities">C and U Charts for Counts of Nonconformities</a></li>
+  <li><a href="#table-5.4-summarizes-the-differences-between-p-c-and-u-charts" id="toc-table-5.4-summarizes-the-differences-between-p-c-and-u-charts" class="nav-link" data-scroll-target="#table-5.4-summarizes-the-differences-between-p-c-and-u-charts">Table 5.4 Summarizes the Differences between P, C and U Charts</a></li>
+  </ul></li>
+  <li><a href="#chapter-6-shewart-chart-savvy-dealing-with-some-issues" id="toc-chapter-6-shewart-chart-savvy-dealing-with-some-issues" class="nav-link" data-scroll-target="#chapter-6-shewart-chart-savvy-dealing-with-some-issues">Chapter 6: Shewart Chart Savvy: Dealing with Some Issues</a>
+  <ul class="collapse">
+  <li><a href="#common-issues-with-statistical-control-charts" id="toc-common-issues-with-statistical-control-charts" class="nav-link" data-scroll-target="#common-issues-with-statistical-control-charts">Common Issues with Statistical Control Charts</a></li>
+  </ul></li>
+  <li><a href="#chapter-7-more-shewart-type-charts" id="toc-chapter-7-more-shewart-type-charts" class="nav-link" data-scroll-target="#chapter-7-more-shewart-type-charts">Chapter 7: More Shewart-Type Charts</a>
+  <ul class="collapse">
+  <li><a href="#rare-events-t-and-g-charts" id="toc-rare-events-t-and-g-charts" class="nav-link" data-scroll-target="#rare-events-t-and-g-charts">Rare Events (T and G Charts)</a></li>
+  <li><a href="#cumulative-sum-cusum-chart" id="toc-cumulative-sum-cusum-chart" class="nav-link" data-scroll-target="#cumulative-sum-cusum-chart">Cumulative Sum (CUSUM) Chart</a></li>
+  <li><a href="#funnel-charts" id="toc-funnel-charts" class="nav-link" data-scroll-target="#funnel-charts">Funnel Charts</a></li>
+  </ul></li>
+  <li><a href="#chapter-8-special-uses-for-shewart-charts" id="toc-chapter-8-special-uses-for-shewart-charts" class="nav-link" data-scroll-target="#chapter-8-special-uses-for-shewart-charts">Chapter 8: Special Uses for Shewart Charts</a></li>
+  <li><a href="#chapter-9-drilling-down-into-aggregate-data-for-improvement" id="toc-chapter-9-drilling-down-into-aggregate-data-for-improvement" class="nav-link" data-scroll-target="#chapter-9-drilling-down-into-aggregate-data-for-improvement">Chapter 9: Drilling Down into Aggregate Data for Improvement</a>
+  <ul class="collapse">
+  <li><a href="#chapter-10-learning-from-individual-patient-data" id="toc-chapter-10-learning-from-individual-patient-data" class="nav-link" data-scroll-target="#chapter-10-learning-from-individual-patient-data">Chapter 10: Learning from Individual Patient Data</a></li>
+  <li><a href="#chapter-11-learning-from-patient-feedback-to-improve-care" id="toc-chapter-11-learning-from-patient-feedback-to-improve-care" class="nav-link" data-scroll-target="#chapter-11-learning-from-patient-feedback-to-improve-care">Chapter 11: Learning from Patient Feedback to Improve Care</a></li>
+  <li><a href="#chapter-12-using-shewhart-charts-in-health-care-leadership" id="toc-chapter-12-using-shewhart-charts-in-health-care-leadership" class="nav-link" data-scroll-target="#chapter-12-using-shewhart-charts-in-health-care-leadership">Chapter 12: Using Shewhart Charts in Health Care Leadership</a>
+  <ul class="collapse">
+  <li><a href="#developing-a-vector-of-measures" id="toc-developing-a-vector-of-measures" class="nav-link" data-scroll-target="#developing-a-vector-of-measures">Developing a Vector of Measures</a></li>
+  </ul></li>
+  <li><a href="#chapter-13-case-studies-using-shewhart-charts" id="toc-chapter-13-case-studies-using-shewhart-charts" class="nav-link" data-scroll-target="#chapter-13-case-studies-using-shewhart-charts">Chapter 13: Case Studies Using Shewhart Charts</a></li>
+  <li><a href="#appendix-shewhart-chart-selection-guide" id="toc-appendix-shewhart-chart-selection-guide" class="nav-link" data-scroll-target="#appendix-shewhart-chart-selection-guide">Appendix: Shewhart Chart Selection Guide</a></li>
+  <li><a href="#statistical-software" id="toc-statistical-software" class="nav-link" data-scroll-target="#statistical-software">Statistical Software</a>
+  <ul class="collapse">
+  <li><a href="#excel" id="toc-excel" class="nav-link" data-scroll-target="#excel">Excel</a></li>
+  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Health Care Data Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="chapter-1-improvement-methodology-provost_health_2011" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-1-improvement-methodology-provost_health_2011">Chapter 1: Improvement Methodology <span class="citation" data-cites="provost_health_2011">[<a href="#ref-provost_health_2011" role="doc-biblioref">1</a>]</span></h2>
+<p><img src="g/g1.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="chapter-2-using-data-for-improvement" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2-using-data-for-improvement">Chapter 2: Using Data for Improvement</h2>
+<p><img src="g/g3.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="g/g2.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="chapter-3-understanding-variation-using-run-charts" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-understanding-variation-using-run-charts">Chapter 3: Understanding Variation Using Run Charts</h2>
+<p>A run chart is a graphical display of data plotted in some type of order. Usually, the median is calculated and used as the chart’s centreline.<br>
+The median is required when using the probability-based rules to interpret a run chart (see below). The median is used as the centerline because (1) it provides the point at which half the observations are expected to be above and below the centerline and (2) the median is not influenced by extreme values in the data.</p>
+<section id="four-rules-to-help-interpret-a-run-chart" class="level3">
+<h3 class="anchored" data-anchor-id="four-rules-to-help-interpret-a-run-chart">Four Rules to Help Interpret a Run Chart</h3>
+<ol type="1">
+<li>Shift: Six or more consecutive points either all above or all below the median.</li>
+<li>Trend: Five or more consecutive points all going up or all going down.</li>
+<li>Runs: A non-random pattern is signalled by too few or too many runs, or crossings of the median line.<br>
+</li>
+<li>Astronomical point: Used in detecting unusually large or small numbers.</li>
+</ol>
+<p><img src="g/g7.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+</section>
+<section id="chapter-4-learning-from-variation-in-data" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-4-learning-from-variation-in-data">Chapter 4: Learning from Variation in Data</h2>
+<section id="using-shewhart-charts-to-given-direction-to-an-improvement-effort" class="level3">
+<h3 class="anchored" data-anchor-id="using-shewhart-charts-to-given-direction-to-an-improvement-effort">Using Shewhart Charts to Given Direction to an Improvement Effort</h3>
+<p><img src="g/t41.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="rules-for-determining-a-special-cause" class="level3">
+<h3 class="anchored" data-anchor-id="rules-for-determining-a-special-cause">Rules for Determining a Special Cause</h3>
+<p>There is general agreement among users of Shewhart charts that a single point outside of either limit is an indication of a special cause of variation.<br>
+However there have been many suggestions for systems of rules to identify special causes that appear as nonrandom patterns within the limits. Figure 4.5 contains ﬁve rules which are recommended for general use with Shewhart charts. These rules are consistent in the sense that the chance of occurrence of Rules 2 through 5 in a stable process is approximately equal to the chance of Rule 1 occurring in a stable process. The occurrence of any one of the rules is a clear indication of the presence of a special cause.</p>
+<p><img src="g/g6.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+</section>
+<section id="chapter-5-understanding-variation-shewart-charts" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-5-understanding-variation-shewart-charts">Chapter 5: Understanding Variation Shewart Charts</h2>
+<section id="understanding-process-variation" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-process-variation">Understanding process variation</h3>
+</section>
+<section id="variation" class="level3">
+<h3 class="anchored" data-anchor-id="variation">Variation</h3>
+<p>The Shewhart chart provides an operational deﬁnition of the two types of causes of variation in a measure: - Common Causes : Those causes that are inherent in the system (process or product) over time, affect everyone working in the system, and affect all outcomes of the system. - Special Causes : Those causes that are not part of the system (process or product) all the time or do not affect everyone, but arise because of speciﬁc circumstances.</p>
+</section>
+<section id="shewhart-chart-selection-guide" class="level3">
+<h3 class="anchored" data-anchor-id="shewhart-chart-selection-guide">Shewhart Chart Selection Guide</h3>
+<p><img src="g/g16.png" class="img-fluid" style="width:100.0%"> <img src="g/t25.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="continuous-data" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-data">Continuous Data</h3>
+<p>X and S Shewhart Charts When continuous data are obtained from a process, it is sometimes of interest to learn about both the average performance of the process and the variation about the average level. In these cases, a set of two Shewhart charts are often used to study the process: the X chart and the S chart. The X chart contains the averages of each subgroup and the S chart the spread (standard deviation) between the measurements within each subgroup.</p>
+<p><img src="g/g15.png" class="img-fluid" style="width:100.0%"></p>
+<section id="figure-5.7-example-of-x-and-s-chart" class="level4">
+<h4 class="anchored" data-anchor-id="figure-5.7-example-of-x-and-s-chart">Figure 5.7: Example of X and S Chart</h4>
+<p><img src="g/t57.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+</section>
+<section id="the-p-chart-for-classiﬁcation-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-p-chart-for-classiﬁcation-data">The P Chart for Classiﬁcation Data</h3>
+<p>The P chart is appropriate whenever the data are based on classiﬁcations made in two categories, for example patients who were either harmed during their hospitalization or not harmed during their hospitalization. Table 5.6 gives some examples where a P chart could be used. The P chart limits are based on a binomial distribution of the data.</p>
+<p><img src="g/g12.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="c-and-u-charts-for-counts-of-nonconformities" class="level3">
+<h3 class="anchored" data-anchor-id="c-and-u-charts-for-counts-of-nonconformities">C and U Charts for Counts of Nonconformities</h3>
+<p>When actual counts of incidents (called nonconformities) rather than classiﬁcation of units are made, either a C chart or a U chart is usually the appropriate Shewhart chart. C and U charts limits are based on the Poisson distribution. Table 5.4 outlined the difference between count and classiﬁcation data.<br>
+To decide whether to use a C chart or a U chart, determine whether the area of opportunity will be constant or will vary for each subgroup of counts.<br>
+Table 5.12 lists examples of applications of C and U charts.<br>
+<img src="g/g11.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="table-5.4-summarizes-the-differences-between-p-c-and-u-charts" class="level3">
+<h3 class="anchored" data-anchor-id="table-5.4-summarizes-the-differences-between-p-c-and-u-charts">Table 5.4 Summarizes the Differences between P, C and U Charts</h3>
+<p><img src="g/g13.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+</section>
+<section id="chapter-6-shewart-chart-savvy-dealing-with-some-issues" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-6-shewart-chart-savvy-dealing-with-some-issues">Chapter 6: Shewart Chart Savvy: Dealing with Some Issues</h2>
+<section id="common-issues-with-statistical-control-charts" class="level3">
+<h3 class="anchored" data-anchor-id="common-issues-with-statistical-control-charts">Common Issues with Statistical Control Charts</h3>
+<ul>
+<li>Uncertainty as to which chart to use</li>
+<li>Uncommon outcomes</li>
+<li>Large seasonal variations</li>
+<li>Limited baseline data</li>
+</ul>
+</section>
+</section>
+<section id="chapter-7-more-shewart-type-charts" class="level1">
+<h1>Chapter 7: More Shewart-Type Charts</h1>
+<p><img src="g/g20.png" class="img-fluid" style="width:100.0%"></p>
+<section id="rare-events-t-and-g-charts" class="level3">
+<h3 class="anchored" data-anchor-id="rare-events-t-and-g-charts">Rare Events (T and G Charts)</h3>
+<p><img src="g/g18.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="cumulative-sum-cusum-chart" class="level3">
+<h3 class="anchored" data-anchor-id="cumulative-sum-cusum-chart">Cumulative Sum (CUSUM) Chart</h3>
+<p>The CUSUM chart plots the cumulative sums (CUSUMs) of the deviations of each sample value from the target value. Because the CUSUM chart is cumulative, even minor drifting in the process mean will cause steadily increasing (or decreasing) cumulative deviation values. - <a href="https://pubmed.ncbi.nlm.nih.gov/28947635/">Detects small changes sooner than standard Shewhart charts</a> - Lacks clear interpretability. - Designed to be one-sided, testing either for a shift towards a specified “poor performance” rate or an “improvement rate”</p>
+<p><img src="g/g17.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="funnel-charts" class="level3">
+<h3 class="anchored" data-anchor-id="funnel-charts">Funnel Charts</h3>
+<p>Funnel plots discourage inappropriate ranking while providing a strong visual indication of “divergent” performance or “special cause” variation. Advantages include the display of the observed event rates, an informal check of the relationship between event rate and volume of cases, and an emphasis on the increased variability expected from smaller centres Suggested by <a href="https://qualitysafety.bmj.com/content/11/4/390.2">Spiegelhalter</a> in a number of publications.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fun1.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">“Funnel plot” of emergency re-admission rates following treatment for a stroke in large acute or multi-service hospitals in England and Wales in 2000–1</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="chapter-8-special-uses-for-shewart-charts" class="level1">
+<h1>Chapter 8: Special Uses for Shewart Charts</h1>
+</section>
+<section id="chapter-9-drilling-down-into-aggregate-data-for-improvement" class="level1">
+<h1>Chapter 9: Drilling Down into Aggregate Data for Improvement</h1>
+<p>The <strong>Drill Down Pathway</strong> includes the following basic steps:<br>
+- Identify the aggregate measure of interest<br>
+- Clarify the measure<br>
+- Create a Shewhart chart for the measure at the aggregate level<br>
+- Drill down into the measure:<br>
+** By organizational unit (placing all units on the same Shewhart chart)<br>
+** By placing each unit on its own Shewhart chart<br>
+- Use rational subgrouping with Shewhart charts to learn more about the causal system for this measure<br>
+- Use SPC tools to learn from the data and then use PDSA cycles to test ideas for improvement<br>
+- Use PDSA cycles to implement successful changes</p>
+<p><img src="g/g23.png" class="img-fluid" style="width:100.0%"> <img src="g/g22.png" class="img-fluid" style="width:100.0%"></p>
+<section id="chapter-10-learning-from-individual-patient-data" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-10-learning-from-individual-patient-data">Chapter 10: Learning from Individual Patient Data</h2>
+</section>
+<section id="chapter-11-learning-from-patient-feedback-to-improve-care" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-11-learning-from-patient-feedback-to-improve-care">Chapter 11: Learning from Patient Feedback to Improve Care</h2>
+</section>
+<section id="chapter-12-using-shewhart-charts-in-health-care-leadership" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-12-using-shewhart-charts-in-health-care-leadership">Chapter 12: Using Shewhart Charts in Health Care Leadership</h2>
+<section id="developing-a-vector-of-measures" class="level3">
+<h3 class="anchored" data-anchor-id="developing-a-vector-of-measures">Developing a Vector of Measures</h3>
+<p>The usefulness of Shewhart charts extends beyond the improvement project level and into the realm of senior leadership. Creating a vector of measures and displaying them each on Shewhart charts enhances senior leadership’s ability to manage, lead, and improve the entire system for which they are responsible.<br>
+A vector of measures is a set of key organizational measures that, although inadequate as individual measures to describe the system, together are very useful to senior leaders to learn about, manage, and improve their system. Each measure in the vector should be displayed on the appropriate Shewhart chart or, if more appropriate, on a run chart. Each measure in the vector should be updated monthly in order to learn about system performance in a timely fashion.</p>
+<p><img src="f11.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+</section>
+<section id="chapter-13-case-studies-using-shewhart-charts" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-13-case-studies-using-shewhart-charts">Chapter 13: Case Studies Using Shewhart Charts</h2>
+</section>
+<section id="appendix-shewhart-chart-selection-guide" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-shewhart-chart-selection-guide">Appendix: Shewhart Chart Selection Guide</h2>
+<p><img src="g/s2.png" class="img-fluid" style="width:100.0%"> <img src="g/s1.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="statistical-software" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-software">Statistical Software</h2>
+<section id="excel" class="level3">
+<h3 class="anchored" data-anchor-id="excel">Excel</h3>
+<p><code>QIMacros</code> <a href="https://www.qimacros.com">QI Macros Excel add-on</a></p>
+</section>
+<section id="stata" class="level3">
+<h3 class="anchored" data-anchor-id="stata">Stata</h3>
+<p>Basic functionality found in base Stata. <a href="https://ideas.repec.org/p/boc/scon15/7.html">Barbara Williams, 2015. “Statistical Process Control Charts,” 2015 Stata Conference 7, Stata Users Group</a></p>
+</section>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
+<ul>
+<li><p><code>qcc</code> First package for SPC Charts in R. Includes implementations of EWMA. <a href="http://www.stat.unipg.it/luca/misc/Rnews_2004-1-pag11-17.pdf">Rnews articles covers basic functionality</a></p></li>
+<li><p><code>qicharts2</code></p></li>
+<li><p><code>spc</code></p></li>
+<li><p><code>cumsum</code> <a href="https://cran.r-project.org/web/packages/cusum/index.html">cusum: Cumulative Sum (CUSUM) Charts for Monitoring of Hospital Performance</a></p></li>
+<li><p><code>NHSRplotthedots</code> Built by the [NHS-R community][https://nhsrcommunity.com/] to provide tools for drawing statistical process control (SPC) charts. This package supports the NHSE/I programme [‘Making Data Count’][https://www.england.nhs.uk/publication/making-data-count/], and allows users to draw XmR charts, use change points, and apply rules with summary indicators for when rules are breached.</p></li>
+<li><p><code>FunnelPlotR</code> An implementation of the funnel plot processes, and overdispersion methods described in:<br> –<a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1467-985X.2011.01010.x">Statistical methods for healthcare regulation: rating, screening and surveillance. Spiegelhalter et al (2012)</a><br> – <a href="https://onlinelibrary.wiley.com/doi/10.1002/sim.1970">Funnel plots for comparing institutional performance. Spiegelhalter (2005)</a><br> – <a href="https://qualitysafety.bmj.com/content/14/5/347">Handling over-dispersion of performance indicators. Spiegelhalter (2005)</a><br> – <a href="https://github.com/nhs-r-community/FunnelPlotR">Github site</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-provost_health_2011" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1 </div><div class="csl-right-inline">Provost LP, Murray SK. <em>The health care data guide: Learning from data for improvement</em>. 1st ed. San Francisco, CA: : Jossey-Bass 2011. </div>
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
